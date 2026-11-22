@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>감성 로컬 스테이 | SOUM 숨</title>
+  <meta name="description" content="AI 개발자를 위한 강릉 오션뷰 스테이, 경주 고택 독채 한옥, 설악 힐링 롯지, 제주 웰니스 하우스 공간 예약">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <i class="ri-compass-3-fill" style="color: var(--primary);"></i>
+        <span>SOUM<span class="logo-badge">LOCAL</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">홈</a></li>
+        <li><a href="tours.html" class="nav-link">로컬 투어 & 액티비티</a></li>
+        <li><a href="stay.html" class="nav-link active">감성 로컬 스테이</a></li>
+        <li><a href="index.html#curation" class="nav-link">테마 큐레이션</a></li>
+        <li><a href="index.html#reviews" class="nav-link">리뷰 & 가이드</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="btn-icon" title="위시리스트" onclick="openWishlistModal()">
+          <i class="ri-heart-line"></i>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+        <button class="btn-primary" onclick="openSearchModal()">
+          <i class="ri-calendar-check-line"></i>
+          <span>예약 조회</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Banner -->
+  <section class="sub-banner">
+    <div class="container sub-banner-content">
+      <span class="sub-banner-tag"><i class="ri-hotel-bed-line"></i> LOCAL STAY & RETREAT</span>
+      <h1 class="sub-banner-title">온전한 Rest를 제공하는 <span>감성 스테이</span></h1>
+      <p style="font-size: 1.05rem; opacity: 0.9; max-width: 650px;">
+        고즈넉한 한옥 독채부터 몰입을 돕는 강릉 오션뷰 스테이, 설악 산자락 힐링 캐빈까지. 머무름 자체가 머릿속 알고리즘을 정리해 주는 정갈한 로컬 독채 스테이.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Stay Content Section -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-layout">
+        
+        <!-- Sidebar Filter -->
+        <aside class="filter-sidebar">
+          <div class="filter-header">
+            <h3><i class="ri-filter-3-line"></i> 숙소 검색 필터</h3>
+            <button type="button" class="btn-reset" onclick="resetStayFilters()"><i class="ri-refresh-line"></i> 초기화</button>
+          </div>
+
+          <!-- Filter Group: Region -->
+          <div class="filter-group">
+            <h4 class="filter-title">지역 선택</h4>
+            <div class="filter-options">
+              <label class="filter-label"><input type="checkbox" name="stayLoc" value="all" checked onchange="filterStays()"> 전체 지역</label>
+              <label class="filter-label"><input type="checkbox" name="stayLoc" value="강릉" onchange="filterStays()"> 강릉·동해</label>
+              <label class="filter-label"><input type="checkbox" name="stayLoc" value="경주" onchange="filterStays()"> 경주·황리단길</label>
+              <label class="filter-label"><input type="checkbox" name="stayLoc" value="설악" onchange="filterStays()"> 설악·속초</label>
+              <label class="filter-label"><input type="checkbox" name="stayLoc" value="제주" onchange="filterStays()"> 제주도</label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Property Type -->
+          <div class="filter-group">
+            <h4 class="filter-title">숙소 유형</h4>
+            <div class="filter-options">
+              <label class="filter-label"><input type="checkbox" name="stayType" value="all" checked onchange="filterStays()"> 전체 유형</label>
+              <label class="filter-label"><input type="checkbox" name="stayType" value="hanok" onchange="filterStays()"> 한옥 독채</label>
+              <label class="filter-label"><input type="checkbox" name="stayType" value="ocean" onchange="filterStays()"> 워케이션 오션뷰</label>
+              <label class="filter-label"><input type="checkbox" name="stayType" value="cabin" onchange="filterStays()"> 마운틴 숲속 캐빈</label>
+              <label class="filter-label"><input type="checkbox" name="stayType" value="villa" onchange="filterStays()"> 풀빌라 & 스파</label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Amenities -->
+          <div class="filter-group">
+            <h4 class="filter-title">편의 시설</h4>
+            <div class="filter-options">
+              <label class="filter-label"><input type="checkbox" name="stayAmenity" value="wifi" onchange="filterStays()"> 고속 Wi-Fi & 모니터</label>
+              <label class="filter-label"><input type="checkbox" name="stayAmenity" value="spa" onchange="filterStays()"> 개인 자쿠지/스파</label>
+              <label class="filter-label"><input type="checkbox" name="stayAmenity" value="kitchen" onchange="filterStays()"> 취사 가능 주방</label>
+            </div>
+          </div>
+
+          <!-- Filter Group: Price Range -->
+          <div class="filter-group">
+            <h4 class="filter-title">1박당 최대 요금</h4>
+            <input type="range" id="stayPriceRange" min="100000" max="600000" step="20000" value="600000" oninput="updateStayPriceLabel(this.value)" onchange="filterStays()" style="width: 100%; accent-color: var(--primary);">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sub); margin-top: 6px;">
+              <span>10만원</span>
+              <span id="stayPriceLabel" style="font-weight: 700; color: var(--primary);">60만원 이하</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Stay Grid -->
+        <main class="filter-main">
+          <!-- Top Sort & Count Bar -->
+          <div class="filter-bar">
+            <div class="result-count">
+              총 <span id="stayTotalCount" style="color: var(--primary); font-weight: 800;">4</span>개의 엄선된 숙소
+            </div>
+            <div class="sort-control">
+              <label for="staySortSelect" style="font-size: 0.88rem; color: var(--text-sub);">정렬 방식:</label>
+              <select id="staySortSelect" class="form-control" style="width: auto; padding: 6px 12px; font-size: 0.88rem;" onchange="filterStays()">
+                <option value="popular">추천순</option>
+                <option value="rating">평점높은순</option>
+                <option value="priceAsc">가격낮은순</option>
+                <option value="priceDesc">가격높은순</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Stay Items Grid -->
+          <div class="grid-2" id="stayGrid">
+            
+            <!-- Stay Item 1: 강릉 안목 솔로 독채 스테이 (Exact Image 1) -->
+            <article class="card stay-card-item" data-id="s1" data-loc="강릉" data-type="ocean" data-price="220000" data-rating="4.92" data-pop="97">
+              <div class="card-img-wrap">
+                <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7c344d25796879378809f8af15b0d7b1af2e760326187b7b0e38390a11c7d9e4" alt="AI 개발자의 5월, 강릉에서 찾은 '나만의 알고리즘': 2박 3일 솔로 트립 가이드 추천 숙소">
+                <span class="card-badge tag-primary">강릉 · 오션뷰 워케이션</span>
+                <button class="btn-wish" onclick="toggleWish(this, 's1')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="card-location"><i class="ri-map-pin-line"></i> 강원 강릉시 안목해변길</div>
+                <h3 class="card-title">강릉 솔로 트립 '알고리즘 스테이' (2박3일 최적화)</h3>
+                <p class="card-desc">개발자 맞춤형 4K 듀얼 모니터 데스크, 동해 바다가 한눈에 들어오는 전면 통유리창과 핸드드립 커피 바 구비.</p>
+                <div class="card-tags">
+                  <span class="tag-pill">#듀얼모니터</span>
+                  <span class="tag-pill">#오션뷰워케이션</span>
+                  <span class="tag-pill">#솔로트립강추</span>
+                </div>
+                <div class="card-footer">
+                  <div class="rating-info"><i class="ri-star-fill"></i> 4.92 <span class="rating-count">(89개 리뷰)</span></div>
+                  <div class="price-info">
+                    <div class="price-unit">1박 기준</div>
+                    <div class="price-val">220,000<span>원</span></div>
+                  </div>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 14px;" onclick="openBookingModal('s1', '강릉 솔로 트립 알고리즘 스테이', 220000, 'https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7c344d25796879378809f8af15b0d7b1af2e760326187b7b0e38390a11c7d9e4')">
+                  <i class="ri-hotel-bed-line"></i> 객실 예약하기
+                </button>
+              </div>
+            </article>
+
+            <!-- Stay Item 2: 경주 신라 고택 독채 한옥 (Exact Image 3) -->
+            <article class="card stay-card-item" data-id="s2" data-loc="경주" data-type="hanok" data-price="260000" data-rating="4.96" data-pop="99">
+              <div class="card-img-wrap">
+                <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_85c1a1adec2127df8a74fa8865c47b78644f6ae719beb1c0d31fcfb0372a1ccb" alt="경주 2박3일, 50만원의 미학: AI 개발자를 위한 가성비 넘치는 신라 유적 탐방 가이드 제휴 숙소">
+                <span class="card-badge tag-secondary">경주 · 신라 고택 한옥</span>
+                <button class="btn-wish" onclick="toggleWish(this, 's2')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="card-location"><i class="ri-map-pin-line"></i> 경북 경주시 황남동 황리단길 인근</div>
+                <h3 class="card-title">경주 50만원의 미학 '신라 고택 독채 스테이'</h3>
+                <p class="card-desc">100년 역사의 서들 기와와 modern interior의 만남. 중정의 침묵과 다도 세트, 족욕 욕조가 갖춰진 프라이빗 고택.</p>
+                <div class="card-tags">
+                  <span class="tag-pill">#독채한옥</span>
+                  <span class="tag-pill">#경주황남동</span>
+                  <span class="tag-pill">#다도테라피</span>
+                </div>
+                <div class="card-footer">
+                  <div class="rating-info"><i class="ri-star-fill"></i> 4.96 <span class="rating-count">(142개 리뷰)</span></div>
+                  <div class="price-info">
+                    <div class="price-unit">1박 기준 (최대 4인)</div>
+                    <div class="price-val">260,000<span>원</span></div>
+                  </div>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 14px;" onclick="openBookingModal('s2', '경주 신라 고택 독채 스테이', 260000, 'https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_85c1a1adec2127df8a74fa8865c47b78644f6ae719beb1c0d31fcfb0372a1ccb')">
+                  <i class="ri-hotel-bed-line"></i> 객실 예약하기
+                </button>
+              </div>
+            </article>
+
+            <!-- Stay Item 3: 설악 마운틴뷰 스마트 롯지 (Exact Image 2) -->
+            <article class="card stay-card-item" data-id="s3" data-loc="설악" data-type="cabin" data-price="190000" data-rating="4.89" data-pop="91">
+              <div class="card-img-wrap">
+                <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_bbe410cb45417a7bffa124149d47371a6c20a33334dad65bad51dfae5cecdaf9" alt="AI 개발자를 위한 최적의 선택: 가민 비보액티브 5로 등산과 체중 관리, 두 마리 토끼를 잡다 베이스캠프">
+                <span class="card-badge tag-primary">설악 · 마운틴 캐빈</span>
+                <button class="btn-wish" onclick="toggleWish(this, 's3')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="card-location"><i class="ri-map-pin-line"></i> 강원 속초시 설악산 자락</div>
+                <h3 class="card-title">설악 스마트 등산 트레커 롯지 (가민 피트니스 존)</h3>
+                <p class="card-desc">설악산 산행 후 피로를 푸는 야외 히노끼 탕과 가민 디바이스 충전 스파 존이 구비된 아웃도어 스테이.</p>
+                <div class="card-tags">
+                  <span class="tag-pill">#설악산롯지</span>
+                  <span class="tag-pill">#히노끼탕</span>
+                  <span class="tag-pill">#피트니스베이스</span>
+                </div>
+                <div class="card-footer">
+                  <div class="rating-info"><i class="ri-star-fill"></i> 4.89 <span class="rating-count">(67개 리뷰)</span></div>
+                  <div class="price-info">
+                    <div class="price-unit">1박 기준</div>
+                    <div class="price-val">190,000<span>원</span></div>
+                  </div>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 14px;" onclick="openBookingModal('s3', '설악 스마트 등산 트레커 롯지', 190000, 'https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_bbe410cb45417a7bffa124149d47371a6c20a33334dad65bad51dfae5cecdaf9')">
+                  <i class="ri-hotel-bed-line"></i> 객실 예약하기
+                </button>
+              </div>
+            </article>
+
+            <!-- Stay Item 4: 제주 서귀포 웰니스 하우스 (Exact Image 4) -->
+            <article class="card stay-card-item" data-id="s4" data-loc="제주" data-type="villa" data-price="340000" data-rating="4.98" data-pop="98">
+              <div class="card-img-wrap">
+                <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/vizbot_733e9a490d9e1e0c72ccef6ba254e6a86d34de9b4c6f53a9f35b6b3a93f1c34d" alt="5월 6일 수요일: 활력 넘치는 하루를 위한 맞춤 루틴! 웰니스 리트리트 스테이">
+                <span class="card-badge tag-secondary">제주 · 웰니스 리트리트</span>
+                <button class="btn-wish" onclick="toggleWish(this, 's4')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+              </div>
+              <div class="card-body">
+                <div class="card-location"><i class="ri-map-pin-line"></i> 제주 서귀포시 남원읍</div>
+                <h3 class="card-title">제주 5월 활력 루틴 '서귀포 웰니스 빌라'</h3>
+                <p class="card-desc">개인 요가 파빌리온과 천연 암반수 온수 자쿠지, 아침마다 전해지는 제주 산지 유기농 조식 바스켓 서비스.</p>
+                <div class="card-tags">
+                  <span class="tag-pill">#제주웰니스</span>
+                  <span class="tag-pill">#온수자쿠지</span>
+                  <span class="tag-pill">#유기농조식</span>
+                </div>
+                <div class="card-footer">
+                  <div class="rating-info"><i class="ri-star-fill"></i> 4.98 <span class="rating-count">(115개 리뷰)</span></div>
+                  <div class="price-info">
+                    <div class="price-unit">1박 기준</div>
+                    <div class="price-val">340,000<span>원</span></div>
+                  </div>
+                </div>
+                <button class="btn-primary" style="width: 100%; margin-top: 14px;" onclick="openBookingModal('s4', '제주 서귀포 웰니스 빌라', 340000, 'https://image-hub-studio.herestay-4226.chatgpt.site/api/images/vizbot_733e9a490d9e1e0c72ccef6ba254e6a86d34de9b4c6f53a9f35b6b3a93f1c34d')">
+                  <i class="ri-hotel-bed-line"></i> 객실 예약하기
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">SOUM LOCAL</div>
+          <p class="footer-desc">SOUM은 지역 고유의 매력과 깊이 있는 휴식을 전달하는 큐레이션 여행 & 스테이 플랫폼입니다.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">탐색</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="tours.html">로컬 투어 & 액티비티</a></li>
+            <li><a href="stay.html">감성 로컬 스테이</a></li>
+            <li><a href="index.html#curation">테마 큐레이션</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">스테이 테마</h4>
+          <ul class="footer-links">
+            <li><a href="stay.html?type=hanok">고택 한옥 독채</a></li>
+            <li><a href="stay.html?type=ocean">강릉 오션뷰 워케이션</a></li>
+            <li><a href="stay.html?type=cabin">설악 산속 힐링 캐빈</a></li>
+            <li><a href="stay.html?type=villa">제주 웰니스 자쿠지 빌라</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">뉴스레터 구독</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 10px;">새롭게 수록되는 엄선된 독채 스테이 소식을 받아보세요.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="이메일 주소 입력" class="newsletter-input" required>
+            <button type="submit" class="btn-primary" style="padding: 10px 16px;">구독</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 SOUM Local Stay & Tour Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">고객센터 1588-0000</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Container -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container" id="modalContainer">
+      <!-- Dynamic Content loaded by JS -->
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

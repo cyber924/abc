@@ -1,5 +1,417 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="강릉에서의 힐링 솔로 트립부터 치앙마이 워케이션까지. 몰입과 완전한 휴식이 필요한 당신을 위한 맞춤형 로컬 여행 큐레이션."><title>복잡한 일상에서 벗어나 만나는 나만의 로컬 스테이 | 스테이노마드</title><style>
- :root{--accent:#c57645;--surface:#f9f5ee;--ink:#202927}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--surface);color:var(--ink);font-family:Pretendard,-apple-system,BlinkMacSystemFont,'Noto Sans KR',sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-size:18px;font-weight:800;letter-spacing:.02em}.nav-links{display:flex;gap:28px;align-items:center;font-size:13px}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:white;padding:13px 21px;border-radius:99px;font-size:13px;font-weight:700}.hero{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:56px;padding:56px 0 90px}.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(30px,4.2vw,58px);line-height:1.18;letter-spacing:-.045em;margin:18px 0}.hero p{font-size:16px;color:#68716d;max-width:530px;margin:0 0 28px}.hero-img,.hero-placeholder{width:100%;aspect-ratio:1.18;object-fit:cover;border-radius:24px;background:#e6e9e2}.hero-placeholder{display:grid;place-items:center;letter-spacing:.2em;color:#a5aaa1}.section{padding:35px 0 100px}.section h2{font-size:clamp(24px,3vw,36px);letter-spacing:-.04em}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid #e5e8e1;border-radius:18px;padding:24px;overflow:hidden}.card img{width:100%;height:180px;object-fit:cover;border-radius:11px;margin-bottom:15px}.card span{color:var(--accent);font-size:12px;font-weight:800}.card h3{font-size:19px;margin:8px 0}.card p{font-size:14px;color:#68716d;margin:0}.contact{padding:48px;border-radius:22px;background:var(--ink);color:white;display:flex;align-items:center;justify-content:space-between;gap:24px}.contact .btn{background:white;color:var(--ink)}footer{padding:35px 0;color:#7d8580;font-size:12px}.layout-center .hero{grid-template-columns:1fr;text-align:center}.layout-center .hero p{margin-left:auto;margin-right:auto}.layout-center .hero-img{max-height:460px;aspect-ratio:2.2}.layout-shop .hero{grid-template-columns:.85fr 1.15fr}.layout-shop .hero-img{border-radius:4px}.layout-editorial .hero-img{border-radius:0}.layout-editorial .card{border-radius:0}.layout-split .hero-img{border-radius:120px 20px 20px 20px}@media(max-width:700px){.wrap{width:calc(100% - 32px)}.nav{height:66px}.nav-links>a:not(.btn){display:none}.hero,.layout-shop .hero{grid-template-columns:1fr;gap:28px;padding:35px 0 55px}.hero h1{font-size:34px}.hero-img,.layout-center .hero-img{aspect-ratio:1.3}.cards{grid-template-columns:1fr}.section{padding:20px 0 60px}.contact{padding:28px;display:block}.contact .btn{margin-top:15px}}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOUM 숨 | 여행 · 로컬 스테이 & 웰니스 트립</title>
+  <meta name="description" content="진정한 휴식과 로컬의 깊이를 더하는 감성 스테이 & 체험형 아웃도어 투어 예약 플랫폼">
+  <!-- Remixicon SVG Icons via CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
- .travel-hero{position:relative;height:min(720px,78vh);min-height:480px;background:#647d70;overflow:hidden;color:white}.travel-hero .hero-img,.travel-hero .hero-placeholder{position:absolute;inset:0;width:100%;height:100%;border-radius:0;object-fit:cover}.travel-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,30,26,.72),rgba(12,30,26,.06))}.travel-copy{position:relative;top:50%;transform:translateY(-50%)}.travel-copy h1,.startup-copy h1,.shop-copy h1,.editorial-head h1{font-size:clamp(36px,5vw,70px);line-height:1.17;letter-spacing:-.05em;max-width:700px;margin:16px 0}.travel-copy p{max-width:480px}.travel-copy .eyebrow{color:#f5cfb7}.travel-copy .btn{background:white;color:#23362c}.travel-caption{position:absolute;bottom:30px;right:5%;font-size:10px;letter-spacing:.2em}.travel-intro{display:flex;gap:12%;padding:65px 0}.travel-intro span,.shop-heading span,.editorial-statement span{font-size:11px;letter-spacing:.15em;color:var(--accent)}.travel-intro p{font-size:23px;max-width:700px;margin:0}.layout-split .card{background:transparent;border:0;padding:0}.layout-split .card img{height:250px;border-radius:0}.startup-hero{text-align:center;padding:76px 0 0}.startup-copy h1,.startup-copy p{margin-left:auto;margin-right:auto}.startup-copy p{max-width:620px;color:#626a7d}.startup-copy .btn{background:#4b6be9}.startup-panel{max-width:840px;margin:50px auto -35px;padding:12px;background:white;border:1px solid #e3e7f4;border-radius:18px;box-shadow:0 25px 60px #24326a22;position:relative}.startup-panel-top,.startup-panel-caption{display:flex;justify-content:space-between;padding:8px 12px;font-size:12px}.startup-panel-top span{color:#afb9dc}.startup-panel .hero-img,.startup-panel .hero-placeholder{height:260px;aspect-ratio:auto;border-radius:8px}.startup-band{background:#202c60;color:#dfe6ff;padding:75px 0 40px;text-align:center;font-size:12px;letter-spacing:.15em}.layout-center .section{padding-top:70px}.layout-center .card{box-shadow:0 8px 30px #293d7410}.shop-hero{display:grid;grid-template-columns:1.15fr .85fr;min-height:570px;background:#eee7dc}.shop-image .hero-img,.shop-image .hero-placeholder{height:100%;min-height:570px;border-radius:0;object-fit:cover}.shop-copy{padding:80px 12%;align-self:center}.shop-copy h1{font-family:Georgia,serif;font-weight:500}.shop-copy p{color:#756c64}.shop-copy .btn{border-radius:0;background:#463a31}.shop-index{margin-top:80px;letter-spacing:.14em;font-size:10px}.shop-heading{display:flex;justify-content:space-between;padding:55px 0 0}.shop-heading p{max-width:440px}.layout-shop .section{padding-top:10px}.layout-shop .card{border:0;background:transparent;padding:0;border-radius:0}.layout-shop .card img{height:300px;border-radius:0}.shop-story{background:#e8ded2;padding:75px 0;margin-bottom:60px}.shop-story h2{font-family:Georgia,serif;font-size:36px}.editorial-hero{padding:55px 0 0}.editorial-label{display:flex;justify-content:space-between;border-top:1px solid #27382c;padding:16px 0;font-size:11px;letter-spacing:.15em}.editorial-head{display:grid;grid-template-columns:1.4fr 1fr;column-gap:70px;align-items:center;padding:20px 0 45px}.editorial-head .eyebrow{grid-column:1 / -1}.editorial-head h1{grid-row:2 / 4}.editorial-head p{color:#667369}.editorial-head .btn{justify-self:start;border-radius:0;background:#275640}.editorial-hero .hero-img,.editorial-hero .hero-placeholder{height:420px;aspect-ratio:auto;border-radius:0}.editorial-statement{display:grid;grid-template-columns:1fr 2fr;padding:70px 0;border-bottom:1px solid #cad2c6}.editorial-statement p{font-size:25px;margin:0}.layout-editorial .section{padding-top:70px}.layout-editorial .card{background:transparent;border:0;border-top:1px solid #a7b8aa;padding:22px 0}.editorial-divider{border-top:1px solid #94a699;padding:22px 0 55px;font-size:11px;letter-spacing:.16em}@media(max-width:700px){.travel-hero{height:580px}.travel-intro{display:block}.travel-intro p{font-size:19px;margin-top:18px}.startup-hero{padding-top:45px}.startup-panel .hero-img,.startup-panel .hero-placeholder{height:200px}.shop-hero{grid-template-columns:1fr}.shop-image .hero-img,.shop-image .hero-placeholder{min-height:320px;height:320px}.shop-copy{padding:35px 24px}.shop-index{margin-top:32px}.shop-heading{display:block}.editorial-head{display:block}.editorial-statement{display:block}.editorial-statement p{font-size:20px;margin-top:18px}.editorial-hero .hero-img,.editorial-hero .hero-placeholder{height:280px}}
- </style></head><body class="layout-split"><header class="wrap nav"><a class="brand" href="#home">스테이노마드</a><nav class="nav-links"><a href="#about">소개</a><a href="#contact">문의</a><a class="btn" href="#contact">맞춤 스테이 탐색하기</a></nav></header><main id="home"><section class="travel-hero"><img class="hero-img" src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7c344d25796879378809f8af15b0d7b1af2e760326187b7b0e38390a11c7d9e4" alt="복잡한 일상에서 벗어나 만나는 나만의 로컬 스테이"><div class="travel-shade"></div><div class="wrap travel-copy"><div class="eyebrow">LOCAL STAY &amp; WORKATION</div><h1>복잡한 일상에서 벗어나 만나는 나만의 로컬 스테이</h1><p>강릉에서의 힐링 솔로 트립부터 치앙마이 워케이션까지. 몰입과 완전한 휴식이 필요한 당신을 위한 맞춤형 로컬 여행 큐레이션.</p><a class="btn" href="#about">맞춤 스테이 탐색하기 →</a></div><span class="travel-caption">A JOURNEY TO REMEMBER</span></section><div class="wrap travel-intro"><span>01 / DISCOVER</span><p>강릉에서의 힐링 솔로 트립부터 치앙마이 워케이션까지. 몰입과 완전한 휴식이 필요한 당신을 위한 맞춤형 로컬 여행 큐레이션.</p></div><section id="about" class="wrap section"><div class="eyebrow">DISCOVER MORE</div><h2>스테이노마드가 제안하는 특별한 로컬 경험</h2><div class="cards"><article class="card"><img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7bd69d263520a3f5f1bd59ad339b40aeb796fab249262640b2e05fa6e47f8287" alt="취향 맞춤 큐레이션" loading="lazy"><span>01</span><h3>취향 맞춤 큐레이션</h3><p>당신의 라이프스타일과 작업 환경에 맞춰 강릉, 제주, 치앙마이 등 최적의 로컬 스테이를 추천해 드립니다.</p></article><article class="card"><img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_94a1885a0d4a9c8ba6a33e6386efb089365f1515a44c0bd10084d0a5512a41a9" alt="일과 휴식의 스마트한 균형" loading="lazy"><span>02</span><h3>일과 휴식의 스마트한 균형</h3><p>개발자와 크리에이터를 위한 안정적인 작업 환경과 깊은 휴식을 동시에 누릴 수 있는 공간을 엄선합니다.</p></article><article class="card"><img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/vizbot_0b49d7c971e5d571611055eddeb1c05accaaf020e75d792010efdbfe333d77ef" alt="깊이 있는 로컬 미식 탐구" loading="lazy"><span>03</span><h3>깊이 있는 로컬 미식 탐구</h3><p>지역 본연의 맛을 담은 로컬 맛집부터 감각적인 다이닝까지, 여행의 영감을 더해주는 미식 경험을 제공합니다.</p></article></div></section><section id="contact" class="wrap contact"><div><h2>스테이노마드와 함께 시작해 보세요</h2><p>더 자세한 내용을 확인해 보세요.</p></div><a class="btn" href="#home">처음으로 ↑</a></section></main><footer class="wrap">© 스테이노마드. All rights reserved.</footer></body></html>
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <i class="ri-compass-3-fill" style="color: var(--primary);"></i>
+        <span>SOUM<span class="logo-badge">LOCAL</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">홈</a></li>
+        <li><a href="tours.html" class="nav-link">로컬 투어 & 액티비티</a></li>
+        <li><a href="stay.html" class="nav-link">감성 로컬 스테이</a></li>
+        <li><a href="#curation" class="nav-link">테마 큐레이션</a></li>
+        <li><a href="#reviews" class="nav-link">리뷰 & 가이드</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <button class="btn-icon" title="위시리스트" onclick="openWishlistModal()">
+          <i class="ri-heart-line"></i>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+        <button class="btn-primary" onclick="openSearchModal()">
+          <i class="ri-calendar-check-line"></i>
+          <span>예약 조회</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="메뉴 열기">
+          <i class="ri-menu-line"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-banner-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-tag"><i class="ri-sparkles-fill"></i> 2025 5월 웰니스 & 로컬 트렌드</span>
+        <h1 class="hero-title">나만의 숨을 찾는 시간,<br><span>로컬 스테이 & 액티비티</span></h1>
+        <p class="hero-desc">강릉의 솔로 감성 해변, 설악의 트레킹 루틴, 경주 고택의 고즈넉함까지. 지친 일상에 몰입과 리프레시를 선사하는 큐레이션 여행을 만나보세요.</p>
+      </div>
+
+      <!-- Quick Search Widget -->
+      <div class="search-widget">
+        <div class="search-tabs">
+          <button class="search-tab active" data-type="all">전체 검색</button>
+          <button class="search-tab" data-type="stay">로컬 스테이</button>
+          <button class="search-tab" data-type="tour">투어 & 클래스</button>
+        </div>
+        <form class="search-form" onsubmit="handleHeroSearch(event)">
+          <div class="form-group">
+            <label>여행지 / 지역</label>
+            <div class="form-input-wrap">
+              <i class="ri-map-pin-2-line"></i>
+              <input type="text" id="searchLocation" class="form-control" placeholder="예: 강릉, 경주, 설악, 제주">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>체크인 / 일정</label>
+            <div class="form-input-wrap">
+              <i class="ri-calendar-line"></i>
+              <input type="date" id="searchDate" class="form-control" value="2025-05-06">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>인원 수</label>
+            <div class="form-input-wrap">
+              <i class="ri-user-3-line"></i>
+              <select id="searchGuests" class="form-control">
+                <option value="1">1인 (솔로 트립)</option>
+                <option value="2" selected>2인 (커플/친구)</option>
+                <option value="4">4인 이상 (소모임)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>여행 테마</label>
+            <div class="form-input-wrap">
+              <i class="ri-compass-discover-line"></i>
+              <select id="searchTheme" class="form-control">
+                <option value="">모든 테마</option>
+                <option value="wellness">웰니스 & 힐링</option>
+                <option value="outdoor">아웃도어 & 등산</option>
+                <option value="culture">역사 & 문화탐방</option>
+                <option value="workation">워케이션 & 감성</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="height: 48px; border-radius: var(--radius-md);">
+            <i class="ri-search-line"></i> 검색하기
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Special Story Section (4 Main External Images Integration) -->
+  <section class="section" id="curation">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">RECOMMENDED CURATION</span>
+          <h2 class="section-title">개발자 & Creator를 위한 로컬 리프레시 가이드</h2>
+          <p class="section-desc">일상의 몰입에서 벗어나 영감을 채우는 5월의 특별한 로컬 스테이 & 투어 큐레이션</p>
+        </div>
+        <a href="tours.html" class="btn-outline">전체 상품 보기 <i class="ri-arrow-right-line"></i></a>
+      </div>
+
+      <div class="grid-4">
+        <!-- Card 1: 강릉 솔로 트립 -->
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7c344d25796879378809f8af15b0d7b1af2e760326187b7b0e38390a11c7d9e4" alt="AI 개발자의 5월, 강릉에서 찾은 '나만의 알고리즘': 2박 3일 솔로 트립 가이드">
+            <span class="card-badge tag-primary">강릉 솔로 트립</span>
+            <button class="btn-wish" onclick="toggleWish(this, 'c1')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+          </div>
+          <div class="card-body">
+            <div class="card-location"><i class="ri-map-pin-line"></i> 강릉 안목 & 경포</div>
+            <h3 class="card-title">AI 개발자의 5월, 강릉에서 찾은 '나만의 알고리즘': 2박 3일 솔로 트립 가이드</h3>
+            <p class="card-desc">파도 소리와 함께 즐기는 안목해변 오션뷰 워케이션 & 밤바다 산책. 1인 여행자를 위한 완벽한 리프레시 코스.</p>
+            <div class="card-tags">
+              <span class="tag-pill">#솔로트립</span>
+              <span class="tag-pill">#오션뷰스테이</span>
+              <span class="tag-pill">#워케이션</span>
+            </div>
+            <div class="card-footer">
+              <div class="rating-info"><i class="ri-star-fill"></i> 4.9 <span class="rating-count">(128)</span></div>
+              <div class="price-info">
+                <div class="price-unit">2박 3일 코스</div>
+                <div class="price-val">280,000<span>원~</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: 가민 비보액티브 등산 -->
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_bbe410cb45417a7bffa124149d47371a6c20a33334dad65bad51dfae5cecdaf9" alt="AI 개발자를 위한 최적의 선택: 가민 비보액티브 5로 등산과 체중 관리, 두 마리 토끼를 잡다">
+            <span class="card-badge tag-secondary">설악 아웃도어</span>
+            <button class="btn-wish" onclick="toggleWish(this, 'c2')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+          </div>
+          <div class="card-body">
+            <div class="card-location"><i class="ri-map-pin-line"></i> 강원 속초·설악산</div>
+            <h3 class="card-title">AI 개발자를 위한 최적의 선택: 가민 비보액티브 5로 등산과 체중 관리, 두 마리 토끼를 잡다</h3>
+            <p class="card-desc">전문 등산 가이드와 함께하는 심폐 강화 트레킹 & 스마트 워치 기반 칼로리/체중 케어 프로그램.</p>
+            <div class="card-tags">
+              <span class="tag-pill">#스마트등산</span>
+              <span class="tag-pill">#체중관리</span>
+              <span class="tag-pill">#설악트레킹</span>
+            </div>
+            <div class="card-footer">
+              <div class="rating-info"><i class="ri-star-fill"></i> 4.95 <span class="rating-count">(94)</span></div>
+              <div class="price-info">
+                <div class="price-unit">1일 챌린지</div>
+                <div class="price-val">110,000<span>원</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: 경주 신라 유적 탐방 -->
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_85c1a1adec2127df8a74fa8865c47b78644f6ae719beb1c0d31fcfb0372a1ccb" alt="경주 2박3일, 50만원의 미학: AI 개발자를 위한 가성비 넘치는 신라 유적 탐방 가이드">
+            <span class="card-badge tag-primary">경주 고택 탐방</span>
+            <button class="btn-wish" onclick="toggleWish(this, 'c3')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+          </div>
+          <div class="card-body">
+            <div class="card-location"><i class="ri-map-pin-line"></i> 경주 황리단길</div>
+            <h3 class="card-title">경주 2박3일, 50만원의 미학: AI 개발자를 위한 가성비 넘치는 신라 유적 탐방 가이드</h3>
+            <p class="card-desc">한옥 독채 스테이 체험과 야경 투어, 황리단길 로컬 다이닝 쿠폰이 포함된 알짠 문화 가성비 패키지.</p>
+            <div class="card-tags">
+              <span class="tag-pill">#경주한옥</span>
+              <span class="tag-pill">#신라야경</span>
+              <span class="tag-pill">#가성비여행</span>
+            </div>
+            <div class="card-footer">
+              <div class="rating-info"><i class="ri-star-fill"></i> 4.88 <span class="rating-count">(210)</span></div>
+              <div class="price-info">
+                <div class="price-unit">2인 기준 2박</div>
+                <div class="price-val">490,000<span>원</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: 맞춤 모닝 루틴 웰니스 -->
+        <article class="card">
+          <div class="card-img-wrap">
+            <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/vizbot_733e9a490d9e1e0c72ccef6ba254e6a86d34de9b4c6f53a9f35b6b3a93f1c34d" alt="5월 6일 수요일: 활력 넘치는 하루를 위한 맞춤 루틴!">
+            <span class="card-badge tag-secondary">제주 웰니스</span>
+            <button class="btn-wish" onclick="toggleWish(this, 'c4')" aria-label="찜하기"><i class="ri-heart-line"></i></button>
+          </div>
+          <div class="card-body">
+            <div class="card-location"><i class="ri-map-pin-line"></i> 제주 서귀포 숲길</div>
+            <h3 class="card-title">5월 6일 수요일: 활력 넘치는 하루를 위한 맞춤 루틴!</h3>
+            <p class="card-desc">새벽 오름 요가와 로컬 싱잉볼 명상, 수제 차 티 세레머니로 에너지 코어를 가꾸는 프리미엄 모닝 웰니스.</p>
+            <div class="card-tags">
+              <span class="tag-pill">#모닝요가</span>
+              <span class="tag-pill">#싱잉볼명상</span>
+              <span class="tag-pill">#웰니스루틴</span>
+            </div>
+            <div class="card-footer">
+              <div class="rating-info"><i class="ri-star-fill"></i> 5.0 <span class="rating-count">(76)</span></div>
+              <div class="price-info">
+                <div class="price-unit">오전 클래스</div>
+                <div class="price-val">85,000<span>원</span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Spotlight Section -->
+  <section class="section" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="spotlight-box">
+        <div class="spotlight-img">
+          <img src="https://image-hub-studio.herestay-4226.chatgpt.site/api/images/external_7c344d25796879378809f8af15b0d7b1af2e760326187b7b0e38390a11c7d9e4" alt="강릉 로컬 워케이션 스테이">
+        </div>
+        <div class="spotlight-content">
+          <span class="spotlight-badge"><i class="ri-vip-diamond-line"></i> LOCAL STAY SPOTLIGHT</span>
+          <h2 class="spotlight-title">강릉 안목해변 파도소리와 함께하는 1인 워케이션 스테이</h2>
+          <p class="spotlight-desc">노트북 하나 들고 떠나는 가장 완벽한 쉼터. 고속 Wi-Fi, 모션 데스크, 핸드드립 커피 키트, 그리고 방 안에서 펼쳐지는 파노라마 동해 바다 뷰를 선사합니다.</p>
+          
+          <div class="spotlight-features">
+            <div class="spot-feat-item"><i class="ri-checkbox-circle-fill"></i> 초고속 전용 Wi-Fi & 모션데스크</div>
+            <div class="spot-feat-item"><i class="ri-checkbox-circle-fill"></i> 오션뷰 자쿠지 & 스파</div>
+            <div class="spot-feat-item"><i class="ri-checkbox-circle-fill"></i> 강릉 원두 로스팅 테이스팅</div>
+            <div class="spot-feat-item"><i class="ri-checkbox-circle-fill"></i> 픽업 & 자전거 대여 서비스</div>
+          </div>
+
+          <div style="display: flex; gap: 16px;">
+            <a href="stay.html" class="btn-primary">스테이 상세 및 예약 <i class="ri-arrow-right-line"></i></a>
+            <a href="tours.html" class="btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.3); background: transparent;">관련 액티비티 보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Categories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">EXPLORE CATEGORIES</span>
+          <h2 class="section-title">취향대로 선택하는 로컬 여행</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card" style="padding: 30px; background: #fff;">
+          <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 16px;"><i class="ri-hotel-bed-line"></i></div>
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;">감성 로컬 스테이</h3>
+          <p style="color: var(--text-sub); font-size: 0.95rem; margin-bottom: 20px;">한옥 독채, 오션뷰 자쿠지, 숲속 롯지 등 지역색이 살아있는 특별한 숙소 컬렉션.</p>
+          <a href="stay.html" class="btn-outline" style="width: fit-content;">스테이 둘러보기</a>
+        </div>
+
+        <div class="card" style="padding: 30px; background: #fff;">
+          <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 16px;"><i class="ri-footprint-line"></i></div>
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;">아웃도어 & 트레킹</h3>
+          <p style="color: var(--text-sub); font-size: 0.95rem; margin-bottom: 20px;">설악산, 지리산, 제주 오름. 체중 관리 및 데이터 기반 피트니스 트레킹 투어.</p>
+          <a href="tours.html?cat=outdoor" class="btn-outline" style="width: fit-content;">투어 둘러보기</a>
+        </div>
+
+        <div class="card" style="padding: 30px; background: #fff;">
+          <div style="font-size: 2.5rem; color: var(--accent); margin-bottom: 16px;"><i class="ri-ancient-pavilion-line"></i></div>
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;">역사 & 문화 도슨트</h3>
+          <p style="color: var(--text-sub); font-size: 0.95rem; margin-bottom: 20px;">경주 신라 유적, 안동 전통 마을. 이야기와 감성이 담긴 가성비 로컬 탐방.</p>
+          <a href="tours.html?cat=culture" class="btn-outline" style="width: fit-content;">도슨트 투어 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="section" id="reviews" style="background: var(--bg-surface); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">REAL REVIEWS</span>
+          <h2 class="section-title">여행자들이 남긴 솔직한 이야기</h2>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div style="background: var(--bg-main); padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p style="font-size: 0.98rem; font-style: italic; color: var(--text-main); margin-bottom: 20px;">
+            "강릉 2박 3일 솔로 트립 가이드를 따라서 다녀왔는데 복잡했던 마음이 확 정리되었습니다. 안목해변 근처 스테이의 작업 공간과 파도 소리가 최고였어요!"
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center;">K</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">김민준 님 (AI 소프트웨어 엔지니어)</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">강릉 2박 3일 솔로 트립 예약</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-main); padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p style="font-size: 0.98rem; font-style: italic; color: var(--text-main); margin-bottom: 20px;">
+            "가민 비보액티브로 칼로리 체크하면서 오른 설악산 트레킹! 등산 초보였지만 가이드분께서 완급 조절을 너무 잘해주셔서 인생 산행이 되었습니다."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center;">P</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">박서연 님 (프로덕트 디자이너)</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">설악 산림 트레킹 투어 예약</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background: var(--bg-main); padding: 28px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+          <div style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+          </div>
+          <p style="font-size: 0.98rem; font-style: italic; color: var(--text-main); margin-bottom: 20px;">
+            "경주 50만원 미학 패키지는 진짜 가성비 최고예요. 고택 한옥에서의 호젓한 밤과 황남대총 야경은 잊을 수 없습니다. 가족 여행으로도 강력 추천해요."
+          </p>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center;">L</div>
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem;">이현우 님 (데이터 분석가)</div>
+              <div style="font-size: 0.8rem; color: var(--text-light);">경주 신라 유적 탐방 예약</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">SOUM LOCAL</div>
+          <p class="footer-desc">SOUM은 지역 고유의 매력과 깊이 있는 휴식을 전달하는 큐레이션 여행 & 스테이 플랫폼입니다.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">탐색</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="tours.html">로컬 투어 & 액티비티</a></li>
+            <li><a href="stay.html">감성 로컬 스테이</a></li>
+            <li><a href="#curation">테마 큐레이션</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">인기 지역</h4>
+          <ul class="footer-links">
+            <li><a href="tours.html?loc=강릉">강릉 (워케이션·솔로)</a></li>
+            <li><a href="tours.html?loc=경주">경주 (한옥·역사)</a></li>
+            <li><a href="tours.html?loc=설악">설악·속초 (아웃도어)</a></li>
+            <li><a href="tours.html?loc=제주">제주 (웰니스)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">뉴스레터 구독</h4>
+          <p style="font-size: 0.85rem; margin-bottom: 10px;">매월 첫째 주, 웰니스 여행 가이드를 전달해 드립니다.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="이메일 주소 입력" class="newsletter-input" required>
+            <button type="submit" class="btn-primary" style="padding: 10px 16px;">구독</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2025 SOUM Local Stay & Tour Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">고객센터 1588-0000</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Component Container -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container" id="modalContainer">
+      <!-- Dynamic Content loaded by JS -->
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
