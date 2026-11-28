@@ -215,6 +215,9 @@ export default function App() {
             <button className="action-btn primary" onClick={() => setShowAddLookModal(true)}>
               + 나만의 룩 등록
             </button>
+            <button className="action-btn secondary" onClick={() => alert('로그인 모달 준비 중입니다.')}>
+              로그인
+            </button>
           </div>
         </div>
       </header>
