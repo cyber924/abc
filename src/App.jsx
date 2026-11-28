@@ -225,7 +225,7 @@ export default function App() {
         <img src={LOOKBOOK_IMAGES.hero} alt="2025 S/S Seoul Silhouette Cover" className="hero-img" />
         <div className="hero-content">
           <span className="hero-badge">2025 S/S COLLECTION EDITORIAL</span>
-          <h2 className="hero-title">SEOUL FEMININE ARCHIVE</h2>
+          <h2 className="hero-title">SEOUL STYLE ARCHIVE</h2>
           <p className="hero-desc">
             가장 한국적인 20대 여성의 섬세한 아우라와 모던 클래식 패션의 우아한 마주함.
             당신만의 퍼스널 스타일 룩북을 탐색하고 커스텀하세요.
